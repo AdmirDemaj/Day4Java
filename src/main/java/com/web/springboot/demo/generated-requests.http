@@ -1,0 +1,29 @@
+###
+POST http://localhost:8080/api/create/person
+
+###
+PUT http://localhost:8080/api/edit/person
+
+###
+PUT http://localhost:8080/api/edit/person/{{id}}
+
+###
+POST http://localhost:8080/api/create/Spid
+
+###
+GET http://localhost:8080/api/get/Spids
+
+###
+POST http://localhost:8080/api/create/Spid
+
+###
+DELETE http://localhost:8080/api/delete/spid/{{id}}
+
+###
+GET http://localhost:8080/api/get/Spids
+
+###
+GET http://localhost:8080/api/spid/{{id}}
+
+###
+GET http://localhost:8080/api/spid/changeStatus/{{id}}

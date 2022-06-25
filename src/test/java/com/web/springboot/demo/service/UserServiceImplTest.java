@@ -14,9 +14,12 @@ class UserServiceImplTest {
     @Mock
     UserServiceImpl userService;
 
+    /*
     @Test
     public void testDatabaseforUsers(){
         assertInstanceOf(User.class, userService.getUserById(1).get());
     }
 
+
+     */
 }

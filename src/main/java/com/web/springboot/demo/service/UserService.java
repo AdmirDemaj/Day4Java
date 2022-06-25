@@ -13,9 +13,9 @@ import java.util.Optional;
 
 @Service
 public interface UserService {
-    public User addUser(User user);
-    public User getUser(Long userId);
-    public User editUserById(Long userId, String name, String surname, String email);
+    public User addUser(User user) throws Exception;
+    public Optional<User> getUser(long id) throws Exception;
+    public User editUserById(User user, long id) throws Exception;
 
-    public Optional<User> getUserById(long id);
 }
+

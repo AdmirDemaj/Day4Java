@@ -11,4 +11,5 @@ import java.util.List;
 public interface SPIDRepository extends CrudRepository<SPID, Long> {
 
     List<SPID> findSpidByUserId(User user);
+
 }

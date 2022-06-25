@@ -12,8 +12,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 @SpringBootTest
-class SpringbootDemoApplicationTests {
+class SpringbootDemoApplicationTests{
 
 	@Autowired
 	private UserServiceImpl userService;
@@ -21,12 +23,17 @@ class SpringbootDemoApplicationTests {
 	private SPIDServiceImpl spidService;
 
 	@Test
-	void contextLoads() {
-		User user = userService.addUser(new User("Admir", "Demaj", "1", "Admir Demaj", "1234", "adidemaj@yahoo.com"));
-		SPID spid = spidService.addSpid(new SPID(user , Status.PENDING, Type.LEVEL_2));
-		System.out.println(userService.getUserById(1));
-		System.out.println(spidService.getSpidByUserId(spid, user));
+	void test() {
+		try {
+			User user = new User("Adi", "Demaj", "1234" , "Admir Demaj", "password", "email");
+			SPID spid = spidService.addSpid(new SPID());
+			System.out.println(userService.getUser(1L));
 
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
 	}
+
+
 
 }
